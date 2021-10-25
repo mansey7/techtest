@@ -42,9 +42,9 @@ class _DetailView extends State<DetailView> {
                   height: MediaQuery.of(context).size.height * 0.25,
                   width: MediaQuery.of(context).size.height * 0.25,
                   child: Center(
-                    child: Image(
+                    child: url != "" ?Image(
                       image: NetworkImage(url!),
-                    ),
+                    ) : const Icon(Icons.music_note_sharp, size: 50),
                   )),
               Container(
                 decoration: const BoxDecoration(

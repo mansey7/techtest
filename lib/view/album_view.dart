@@ -106,12 +106,12 @@ class _Home extends State<Home> {
                                       ),
                                       leading: CircleAvatar(
                                         radius: 17,
-                                        child: ClipOval(
-                                          child: Image(
+                                        child: url != "" ?ClipOval(
+                                          child:  Image(
                                             image: NetworkImage(url!),
                                             fit: BoxFit.fill,
                                           ),
-                                        ),
+                                        ): const Icon(Icons.music_note_sharp),
                                       ),
                                       trailing:
                                           const Icon(Icons.arrow_forward_ios),
